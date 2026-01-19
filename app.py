@@ -12,8 +12,8 @@ if api_key:
     try:
         genai.configure(api_key=api_key)
         
-        # ESTA ES LA LÍNEA CRUCIAL PARA EVITAR EL 404
-        model = genai.GenerativeModel('gemini-1.0-pro')
+        # ESTA ES LA VERSIÓN QUE GOOGLE ESTÁ PIDIDENDO AHORA
+        model = genai.GenerativeModel('gemini-1.5-flash')
         
         if "messages" not in st.session_state:
             st.session_state.messages = []
@@ -33,8 +33,7 @@ if api_key:
                 st.markdown(response.text)
                 
     except Exception as e:
-        # Esto nos dirá si es un problema de "Fatturazione" (Facturación) o de Modelo
         st.error(f"⚠️ Nota técnica: {str(e)}")
 else:
     st.info("Introduce tu llave API a la izquierda.")
-    
+                
