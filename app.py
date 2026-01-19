@@ -12,7 +12,7 @@ if api_key:
     try:
         genai.configure(api_key=api_key)
         # Usamos el modelo más básico y estable para asegurar conexión
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        genai.GenerativeModel('gemini-pro')
         
         if "messages" not in st.session_state:
             st.session_state.messages = []
