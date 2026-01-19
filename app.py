@@ -40,7 +40,4 @@ if api_key:
         st.error(f"Error de conexión: Verifica tu API Key en Google AI Studio.")
 else:
     st.info("Introduce tu llave API en la izquierda para activar el puente.")
-        response = st.session_state.chat.send_message(prompt)
-        st.chat_message("assistant").markdown(response.text)
-else:
-    st.info("Introduce tu llave API en la izquierda para activar el puente.")
+        
